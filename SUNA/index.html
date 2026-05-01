@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Archives de Sunagakure — Exploration du Désert</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Cinzel:wght@400;600;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+
+<div class="suna-background-image"></div>
+
+
+
+<canvas id="desertCanvas"></canvas>
+
+
+
+<div class="hud">
+
+  <div class="hud-title" style="display: flex; align-items: center; gap: 12px;">
+
+   
+
+    <img src="images/arch.png" alt="Logo Archeologie" style="width: 70px; height: 70px; object-fit: contain; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));">
+
+   
+
+    <div>
+
+      Archives de Sunagakure
+
+      <span class="kanji">砂隠れの里</span>
+<span style="display: block; font-style: italic; font-size: 11px; font-family: 'Cormorant Garamond', serif; opacity: 1; margin-top: 2px; letter-spacing: 1px;">Document par Heiji Hamada</span>
+    </div>
+
+  </div>
+
+ 
+
+  <div class="audio-control">
+
+    <button class="audio-btn" id="audioToggle"></button>
+
+    <input type="range" class="volume-slider" id="volumeSlider" min="0" max="100" value="25">
+
+    <span class="volume-label" id="volumeLabel">25%</span>
+
+  </div>
+
+  <audio id="ambientAudio" src="audio/ambiance.mp3" loop preload="auto"></audio>
+
+</div>
+
+
+
+<div class="scroll-hint" id="scrollHint">
+
+  <span class="arrow">⌄</span>
+
+  Scrollez pour explorer le désert
+
+</div>
+
+
+
+<div class="progress-track">
+
+  <div class="progress-fill" id="progressFill"></div>
+
+</div>
+
+
+
+<div class="landmark-tooltip" id="tooltip">
+
+  <div class="landmark-tooltip-inner" id="tooltipInner"></div>
+
+</div>
+
+
+
+<div class="modal-overlay" id="modalOverlay">
+
+  <div class="modal-parchment">
+
+    <button class="modal-close" id="modalClose">✕</button>
+
+    <div class="modal-content-scroll" id="modalContent"></div>
+
+  </div>
+
+</div>
+
+
+
+<script defer src="script.js"></script>
+
+</body>
+
+</html>
